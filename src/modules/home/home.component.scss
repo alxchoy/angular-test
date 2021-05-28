@@ -1,0 +1,15 @@
+.home {
+  margin-top: 200px;
+
+  &-title {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  &-loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

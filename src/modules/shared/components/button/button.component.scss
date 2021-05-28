@@ -1,0 +1,24 @@
+@import "../../../../assets/styles/variables.scss";
+
+:host {
+  border: 1px solid transparent;
+  padding: 7px;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &.primary {
+    background-color: $blue;
+    color: $white;
+  }
+
+  &.secondary {
+    background-color: $white;
+    color: $blue;
+    border-color: $blue;
+  }
+
+  &.alert {
+    background-color: $red;
+    color: $white;
+  }
+}

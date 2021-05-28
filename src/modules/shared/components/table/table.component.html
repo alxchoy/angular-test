@@ -1,0 +1,20 @@
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <ng-container [matColumnDef]="column.id" *ngFor="let column of columnsConfig">
+    <th mat-header-cell *matHeaderCellDef>{{ column.name }}</th>
+    <td mat-cell *matCellDef="let element">
+      <ng-container *ngIf="column.id === 'btn'">
+        <button
+          mp-btn
+          *ngFor="let btn of column.buttonList"
+          (click)="btn.action(element)"
+          [config]="btn"
+        >
+          {{ btn.description }}
+        </button>
+      </ng-container>
+      {{ element[column.id] }}
+    </td>
+  </ng-container>
+  <tr mat-header-row *matHeaderRowDef="columnsList"></tr>
+  <tr mat-row *matRowDef="let row; columns: columnsList"></tr>
+</table>
